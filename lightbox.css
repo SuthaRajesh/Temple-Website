@@ -14,8 +14,7 @@
 
 /* Modal Image */
 .modal-content {
-  margin: auto;
-  
+  margin: auto;  
   max-height: 100vh;
   display: block;
   max-width: 50vw;   /* ✅ limit width */
