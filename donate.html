@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Donations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="./lightbox.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    body {
+      background: linear-gradient(135deg, #d9f8d9, #ffe5b4); /* Pale green to light orange */
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1 {
+      color: #6a1b9a;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .donate-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .donate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #6a1b9a, #d63384);
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #d63384, #6a1b9a);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="sticky-top" id="navbar"></div>
+  <div id="hero"></div>
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Support the Temple 🙏</h1>
+
+    <!-- UPI Payments -->
+    <div class="donate-card">
+      <h4>UPI Payments</h4>
+      <p>You can donate through any UPI app:</p>
+      <ul>
+        <li><b>GPay:</b> templedonation@okicici</li>
+        <li><b>PhonePe:</b> templedonation@ybl</li>
+        <li><b>Paytm:</b> 9876543210@paytm</li>
+      </ul>
+      <p><b>UPI ID:</b> <code>templedonation@upi</code></p>
+    </div>
+
+    <!-- Bank Transfer -->
+    <div class="donate-card">
+      <h4>Bank Transfer</h4>
+      <p><b>Account Name:</b> Temple Trust</p>
+      <p><b>Account Number:</b> 123456789012</p>
+      <p><b>IFSC Code:</b> ICIC0001234</p>
+      <p><b>Bank:</b> ICICI Bank, Chennai</p>
+    </div>
+
+    <!-- Direct Hand Donation -->
+    <div class="donate-card">
+      <h4>Donate Directly</h4>
+      <p>You can also donate directly by contacting:</p>
+      <p><b>Contact Number:</b> +91 98765 43210</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-success"> Back to Home</a>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="text-center py-3 text-dark" style="background-color: #EDA35A;">
+  &copy; 2025 Kaliamman Temple | All Rights Reserved
+</footer>
+
+
+  <script src="include.js"></script>
+<script>
+  loadHTML("navbar", "navbar.html");
+  loadHTML("hero", "hero.html");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

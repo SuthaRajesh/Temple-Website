@@ -1,0 +1,74 @@
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1050; 
+  padding-top: 80px; 
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; 
+  align-content: center;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Image */
+.modal-content {
+  margin: auto;
+  
+  max-height: 100vh;
+  display: block;
+  max-width: 50vw;   /* ✅ limit width */
+  border-radius: 10px;
+}
+
+/* Caption */
+#caption {
+  text-align: center;
+  color: #f1f1f1;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #bbb;
+}
+
+/* Navigation Arrows */
+.modal .prev,
+.modal .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.modal .prev {
+  left: 20px;
+}
+.modal .next {
+  right: 20px;
+}
+
+.modal .prev:hover,
+.modal .next:hover {
+  color: #f1f1f1;
+  transform: scale(1.2);
+}

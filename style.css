@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    background: url('temple.jpg') center/cover no-repeat;
+    height: 70vh;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .navbar-brand i {
+    margin-right: 8px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  .text-justify {
+    text-align: justify;
+  }
+  
+
+  @media (max-width:  768px) {
+    .smImg img {
+      max-width: 40% !important;
+    }
+  }
+  .navbar a {
+    color: #37353E; /* Dark brown text */
+    font-weight: 600;
+  }
+  .navbar a:hover {
+    color: #ECECBB; /* Maroon hover effect */
+  }
+  .gallery-card {
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+   
+  }
+  .gallery-card img {
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  .gallery-card:hover img {
+    transform: scale(1.1);
+  }
+
+  
+.image-style {
+  width: 100%;
+  height: 250px;        /* fixed box height */
+  object-fit: contain;  /* keep full image */
+  background: #f8f9fa;  /* background for empty space */
+}
+
+.img-box {
+  width: 100%;
+  height: 250px;       /* fixed visi8ble height */
+  overflow-y: auto;    /* enables vertical scroll */
+  overflow-x: hidden;  /* hides sideways scroll */
+}
+
+.img-box img {
+  width: 100%;         /* scale width */
+   height: auto;     /*   let height vary */
+  display: block;
+}
+
+  

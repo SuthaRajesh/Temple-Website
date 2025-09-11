@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="./lightbox.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    body {
+      background-color: #FAD691;
+      font-family: 'Poppins', sans-serif;
+    }
+    .bg_color{
+      background-color: #F2E2B1;
+    }
+   
+    .gallery-card {
+  width: 100%;
+  max-width: 180px;   /* 👈 reduce overall size */
+  aspect-ratio: 1 / 1;
+  margin: auto;     
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f8f8f8; /* background for empty space */
+}
+    
+    .gallery-img {
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      object-fit: contain;
+    }
+    .gallery-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 👈 show full image without cropping */
+ 
+}
+
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .gallery-header {
+      text-align: center;
+      margin: 40px 0;
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body class="bg_color">
+
+  <div class="sticky-top" id="navbar"></div>
+  
+  <!-- <div class="container">
+    <h2 class="gallery-header text-center p-3 mb-4">Old Temple</h2>
+    <h4 class="gallery-header text-success text-center pb-3 mb-5">“Every handful of soil carries the dream of a temple; every brick laid makes the plan come true.”</h4>
+    <div class="row">
+
+      <div class="d-flex flex-column align-items-stretch me-5 flex-shrink-0 bg-body-tertiary " style="width: 250px;">
+          <a href="/" class="d-flex align-items-center p-3 link-body-emphasis text-decoration-none border-bottom">
+            <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-5 fw-semibold">🙏 Devotional Glimpses</span>
+          </a>
+          <div class="list-group list-group-flush border-bottom scrollarea">
+            <a href="#oldtemplecontainer" class="list-group-item list-group-item-action py-3 active" aria-current="true">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Images of Old temple</strong>
+              </div>
+              <div class="col-10 mb-1 small">Click here to view the images of old temple.</div>
+            </a>
+            <a href="#newtemplecontainer" class="list-group-item list-group-item-action py-3 lh-sm">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Images of New Temple</strong>
+                
+              </div>
+              <div class="col-10 mb-1 small">Click here to view the images of new temple.</div>
+            </a>
+            <a href="" class="list-group-item list-group-item-action py-3 lh-sm">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Kumbabishegam</strong>
+              </div>
+              <div class="col-10 mb-1 small">Tap here to view Kumbabishegam photos.</div>
+            </a>
+            <a href="" class="list-group-item list-group-item-action py-3 lh-sm">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Nonbu</strong>
+              </div>
+              <div class="col-10 mb-1 small">Nonbu Photos to view</div>
+            </a>
+
+            <a href="" class="list-group-item list-group-item-action py-3 lh-sm">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+                <strong class="mb-1">Other Events</strong>
+              </div>
+              <div class="col-10 mb-1 small">Tap to view other events.</div>
+            </a>
+
+          </div>
+
+      </div>
+
+   
+      <div class="col-lg-9 " id="oldtemplecontainer">
+        <div class="row g-4 py-3" style="background-color: #F5EFFF;">
+
+          <div class="col-6 col-md-4 col-lg-2 d-flex">
+            <div class="gallery-card flex-fill">
+              <img src="images/oldtemple/oldamman.jpg" class="gallery-img popup-img" alt="Temple 4">
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-4 col-lg-2 d-flex">
+            <div class="gallery-card flex-fill">
+              <img src="images/oldtemple/oldtemple.jpg" class="gallery-img popup-img" alt="Temple 1">
+            </div>
+          </div>
+         
+          <div class="col-6 col-md-4 col-lg-2 d-flex">
+            <div class="gallery-card flex-fill">
+              <img src="images/oldtemple/old.jpg" class="gallery-img popup-img" alt="Temple 4">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+  
+  <div class="container" id="newtemplecontainer">
+    <h2 class="gallery-header text-center p-3 mb-4">Old Temple</h2>
+    <h5 class="gallery-header text-success text-center pb-3 mb-5">“Every handful of soil carries the dream of a temple; every brick laid makes the plan come true.”</h5>
+    <div class="row p-5 g-3" style="background-color: #F2E2B1">
+  
+      <!-- Gallery Item -->
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/oldtemple/oldamman.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/oldtemple/oldtemple.jpg" class="gallery-img popup-img" alt="Temple 1">
+        </div>
+      </div>
+     
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/oldtemple/old.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/oldtemple/initiative.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+     
+             
+  
+    </div>
+
+  </div>
+
+  
+  
+  <div class="container" id="newtemplecontainer">
+    <h2 class="gallery-header text-center p-3 mb-4">New Temple </h2>
+    <h5 class="gallery-header text-success text-center pb-3 mb-5">"A temple is not built by stone alone, but by the prayers, unity, and dreams of its people."</h5>
+    <div class="row p-5 g-3" style="background-color: #F2E2B1;">
+  
+      <!-- Gallery Item -->
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/plan.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/palayam.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/events.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/purchase.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/purchase1.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/start_to_construct.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/basement.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/basement2.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/gnp_idol_fix.jpg" class="gallery-img popup-img" alt="Temple 2">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/idol_fix2.jpg" class="gallery-img popup-img" alt="Temple 2">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/idol_fix3.jpg" class="gallery-img popup-img" alt="Temple 2">
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/bell.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/construction1.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/kodimaram.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+             
+  
+    </div>
+
+  </div>
+
+
+   
+  <div class="container" id="newtemplecontainer">
+    <h2 class="gallery-header text-center p-3 mb-4">Consecration </h2>
+    <h5 class="gallery-header text-success text-center pb-3 mb-5">“When the sanctum is consecrated, stone becomes God, and faith becomes life.”</h5>
+    <div class="row p-5 g-3" style="background-color: #F2E2B1;">
+  
+      <!-- Gallery Item -->
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/newtemple1/invitation1.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/news_paper.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/amount.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/1.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/from_pcm.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/glimps.jpg" class="gallery-img popup-img" alt="Temple 3">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/kumbabisegam.jpg" class="gallery-img popup-img" alt="Temple 2">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/kummi.jpg" class="gallery-img popup-img" alt="Temple 2">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/mariyathai1.jpg" class="gallery-img popup-img" alt="Temple 2">
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/mariyathai2.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/mariyathai3.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/melam.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+      
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/melam2.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/mulaipari.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/mulaipari2.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/nonbu.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/oorvalam.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/oorvalam1.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/pcm2.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/people1.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/people2.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/temple_view.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/theertam3.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/theertham2.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/theertham.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/theertham3.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 d-flex">
+        <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+          <img src="images/consecration/volunteer.jpg" class="gallery-img popup-img" alt="Temple 4">
+        </div>
+      </div>
+  
+    </div>
+
+  </div>
+
+
+<!-- Footer -->
+<footer class="text-center py-3 text-dark" style="background-color: #EDA35A;">
+  &copy; 2025 Kaliamman Temple | All Rights Reserved
+</footer>
+
+
+  <!-- Modal -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+
+  <!-- Image -->
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+
+  <!-- Navigation Arrows -->
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+  <script src="include.js"></script>
+<script>
+  loadHTML("navbar", "navbar.html"); 
+</script>
+<script src="./lightbox.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
