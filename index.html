@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Name</title>
+  <title>Kaliamman Temple</title>
   <style>
      .gallery-img {
       border-radius: 12px;
@@ -16,7 +16,7 @@
   max-height: 100%;
   object-fit: contain; /* 👈 show full image without cropping */
  
-}
+    }
 
     .gallery-img:hover {
       transform: scale(1.05);
@@ -28,6 +28,8 @@
       font-weight: bold;
       color: #444;
     }
+   
+
   </style>
 
  <link rel="stylesheet" href="./lightbox.css">
@@ -38,10 +40,11 @@
 <body>
 
 <!-- Navbar & Hero -->
-  <div class="sticky-top" id="navbar"></div>
- 
+<div class="sticky-top" id="navbar"></div>
+
+
  <!-- hero section -->
-  <section class="hero p-2 text-muted d-flex align-items-center" 
+<section class="hero p-2 text-muted d-flex align-items-center" 
   style="background-image: url('images/background1.png'); 
          background-size: cover; 
          background-position: center; 
@@ -58,12 +61,12 @@
 
 <!-- Text Column -->
 <div class="col-12 col-md-6 col-sm-12 text-center text-md-start">
- <h3 class="text-dark display-6">Arulmigu Kaliamman Thirukovil</h3>
+ <h3 class="text-dark display-6" data-i18n="temple_title"></h3>
  <div class="text-success">
    <hr style="width: 95%;">
  </div>
- <p class="lead mt-3 text-dark">
-   "Bow to Kaliamman, and you bow to the strength within yourself."
+ <p class="lead mt-3 text-dark" data-i18n="temple_desc">
+   
  </p>
 </div>
 
@@ -76,7 +79,7 @@
 <section class="py-5 text-center" style="background-color: #FFEEA9; cursor: pointer;"
 onclick="window.location.href='history.html'">
   <div class="container rounded-4" style="background-color: #FEFFD2;">
-    <h2 class="text-center mb-5 p-4 fw-bold text-success">History</h2>
+    <h2 class="text-center mb-5 p-4 fw-bold text-success" data-i18n="history_title"></h2>
     <div class="row g-4 align-items-start">
       
       <!-- Old Temple History -->
@@ -84,9 +87,9 @@ onclick="window.location.href='history.html'">
         <img src="images/oldtemple/oldtemple.jpg" alt="Old Temple" 
              class="img-fluid border border-3 border-light shadow-lg mb-2 rounded shadow-sm" 
              style="max-width: 70%; height: 220px; object-fit: cover;">
-        <h4 class="mt-3 text-success">Old Temple</h4>
-        <p class="text-muted text-justify px-3">
-          The origins of our temple trace back to <b>1928</b>, when the villagers built a humble shrine beneath the <b>sacred Arasa Maram</b>, installing idols of <b>Lord Ganesha and Kaliamman</b>. This simple shrine soon became the spiritual heart of the village, where devotees gathered for prayers, poojas, and festivals with deep faith and unity...
+        <h4 class="mt-3 text-success" data-i18n="oldtemple"></h4>
+        <p class="text-muted text-justify px-3" data-i18n="oldtemple_desc">
+         
         </p>
       </div>
             <!-- New Temple History -->
@@ -94,16 +97,15 @@ onclick="window.location.href='history.html'">
         <img src="images/newtemple1/newtemple.jpg" alt="New Temple" 
              class="img-fluid border border-3 border-light shadow-lg mb-2 rounded shadow-sm" 
              style="max-width: 70%; height: 220px; object-fit: cover;">
-        <h4 class="mt-3 text-success">New Temple</h4>
-        <p class="text-muted text-justify px-3">
-          In <b>2016</b>, the villagers resolved to build a new,<b> grand temple</b>. Through collective effort, devotion, and generous donations, a magnificent stone temple was <b>completed in 2019</b>, standing as a lasting symbol of faith, unity, and divine grace...
+        <h4 class="mt-3 text-success" data-i18n="newtemple">New Temple</h4>
+        <p class="text-muted text-justify px-3" data-i18n="newtemple_desc">
         </p>
       </div>
     </div>
 
     <!-- Button -->
     <div class="text-center p-4 m-5">
-      <a href="history.html" class="btn btn-success px-4 py-2 rounded-pill shadow-sm">
+      <a href="history.html" class="btn btn-success px-4 py-2 rounded-pill shadow-sm" data-i18n="read_full_history">
         Read Full History
       </a>
     </div>
@@ -120,9 +122,9 @@ style="background-color: #FEFFD2; cursor: pointer;"
       
       <!-- Left Side: Text -->
       <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="text-center text-md-start mb-4">Architecture</h2>
-        <p class="text-center justify-content text-md-start">
-          The architecture of our temple is a beautiful blend of tradition and devotion. Every part of the structure has a sacred meaning — from the towering gopuram (gateway tower) that welcomes devotees, to the mandapam (pillared hall) where prayers and rituals take place. The garbhagriha (sanctum sanctorum) is the heart of the temple, where the deity resides, radiating divine energy. Intricate carvings, symbolic motifs, and sacred geometry guide the design, showing the harmony between art, science, and spirituality. The temple is not just built with stone and mortar, but with the faith and dedication of the community, making it a living space of culture, worship, and divine presence.
+        <h2 class="text-center text-md-start mb-4" data-i18n="architecture">Architecture</h2>
+        <p class="text-center justify-content text-md-start" data-i18n="architecture_desc">
+          
         </p>
       </div>
       
@@ -140,7 +142,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
 
 <!--Img gallery-->
 <section class="container my-5 p-5" style="background-color: #FFEEA9">
-  <h2 class="text-center mb-4">Gallery</h2>
+  <h2 class="text-center mb-4" data-i18n="gallery"></h2>
   <div class="row g-4">
 
     <!-- Old Temple & Goddess Images -->
@@ -152,7 +154,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
           </div>
         </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Old Temple & Goddess</h5>
+          <h5 class="card-title" data-i18n="gal1"></h5>
         </div>
       </div>
     </div>
@@ -167,7 +169,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
           </div>
         </div>
         <div class="card-body text-center">
-          <h5 class="card-title">New Temple</h5>
+          <h5 class="card-title" data-i18n="gal2"></h5>
         </div>
       </div>
     </div>
@@ -182,7 +184,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
           </div>
         </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Kumbabishegam</h5>
+          <h5 class="card-title" data-i18n="gal3"></h5>
         </div>
       </div>
     </div>
@@ -199,7 +201,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
           </div>
         </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Nonbu</h5>
+          <h5 class="card-title" data-i18n="gal4"></h5>
         </div>
       </div>
     </div>
@@ -215,7 +217,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
           </div>
         </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Events</h5>
+          <h5 class="card-title" data-i18n="gal5"></h5>
         </div>
       </div>
     </div>
@@ -224,7 +226,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
     <!-- View More -->
     <div class="col-md-4 col-lg-2 d-flex align-items-center justify-content-center">
       <div class="d-flex justify-content-center justify-content-md-start mt-3">
-        <a href="gallery.html" class="btn btn-success btn-lg shadow">
+        <a href="gallery.html" class="btn btn-success btn-lg shadow" data-i18n="view_more">
           View More
         </a>
       </div>
@@ -242,14 +244,13 @@ style="background-color: #FEFFD2; cursor: pointer;"
       
       <!-- Left Side: Text -->
       <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="text-center text-md-start mb-4">Donations</h2>
-        <p class="text-center justify-content text-md-start">
-          Support the temple and its activities through your kind donations.
-          Click here to contribute via GPay, PhonePe, UPI, or direct transfer.
+        <h2 class="text-center text-md-start mb-4" data-i18n="donation_title"></h2>
+        <p class="text-center justify-content text-md-start" data-i18n="donation_desc">
+         
         </p>
         <div class="d-flex justify-content-center justify-content-md-start mt-3">
-          <a href="donate.html" class="btn btn-success btn-lg shadow">
-            Offer Your Support!
+          <a href="donate.html" class="btn btn-success btn-lg shadow" data-i18n="donation_button">
+          
           </a>
         </div>
 
@@ -277,16 +278,16 @@ style="background-color: #FEFFD2; cursor: pointer;"
 <!-- Contact Section -->
 <section id="contact"  class="py-5" style="background-color: #f4f8f1;"> 
   <div class="container text-center">
-    <h2 class="mb-4 fw-bold text-success">📞 Contact Us</h2>
-    <p class="mb-5 text-muted">We’d love to hear from you! Reach us anytime for temple details, donations, or festival updates.</p>
+    <h2 class="mb-4 fw-bold text-success" data-i18n="contact_us"></h2>
+    <p class="mb-5 text-muted" data-i18n="contact_desc"></p>
     
     <div class="row g-4">
       <!-- Address -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
           <div class="card-body">
-            <h5 class="fw-bold text-success mb-3">📍 Address</h5>
-            <p class="text-muted mb-0">
+            <h5 class="fw-bold text-success mb-3" data-i18n="address">📍 Address</h5>
+            <p class="text-muted mb-0" data-i18n="address_desc">
               Sri Kaliamman Temple<br>
               123 Temple Street,<br>
               Chennai, Tamil Nadu - 600001
@@ -299,8 +300,8 @@ style="background-color: #FEFFD2; cursor: pointer;"
       <div class="col-md-4">
         <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
           <div class="card-body">
-            <h5 class="fw-bold text-success mb-3">📱 Phone</h5>
-            <p class="text-muted mb-0">
+            <h5 class="fw-bold text-success mb-3" data-i18n="mobile"></h5>
+            <p class="text-muted mb-0" data-i18n="numbers">
               +91 98765 43210<br>
               +91 91234 56789
             </p>
@@ -312,7 +313,7 @@ style="background-color: #FEFFD2; cursor: pointer;"
       <div class="col-md-4">
         <div class="card h-100 shadow-sm border-0 rounded-4 p-4">
           <div class="card-body">
-            <h5 class="fw-bold text-success mb-3">✉️ Email</h5>
+            <h5 class="fw-bold text-success mb-3" data-i18n="email"></h5>
             <p class="mb-0">
               <a href="mailto:templetrust@gmail.com" 
                  class="text-decoration-none fw-semibold text-muted">
@@ -326,9 +327,9 @@ style="background-color: #FEFFD2; cursor: pointer;"
 
     <!-- Social Media (Optional) -->
     <div class="mt-5">
-      <a href="#" class="btn btn-success rounded-pill me-2">🌐 Website</a>
-      <a href="#" class="btn btn-success rounded-pill me-2">📘 Facebook</a>
-      <a href="#" class="btn btn-success rounded-pill">📷 Instagram</a>
+      <a href="#" class="btn btn-success rounded-pill p-1 me-2" data-i18n="website"></a>
+      <a href="#" class="btn btn-success rounded-pill p-1 me-2" data-i18n="facebook"></a>
+      <a href="#" class="btn btn-success rounded-pill p-1" data-i18n="instagram">📷 Instagram</a>
     </div>
   </div>
 </section>
@@ -356,7 +357,19 @@ style="background-color: #FEFFD2; cursor: pointer;"
 <script>
   loadHTML("navbar", "navbar.html");
  
+  fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+
+        // After navbar is loaded, now load lang.js
+        const script = document.createElement('script');
+        script.src = 'lang.js';
+        document.body.appendChild(script);
+      });
+
 </script>
+
 <script src="./lightbox.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
