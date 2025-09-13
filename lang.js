@@ -1,10 +1,13 @@
 let translations = {};
 let currentLang = localStorage.getItem('lang') || 'en';
 
-// Detect current page name (index.html → index)
-const pageName = window.location.pathname.split('/').pop().split('.')[0] || 'index';
+// Detect current page name robustly
+let path = window.location.pathname;
+let pageName = path.substring(path.lastIndexOf('/') + 1); // get last part of URL
+if (!pageName) pageName = 'index';            // if empty, default to index
+else pageName = pageName.split('.')[0];       // remove extension if exists
 
-// Load the correct JSON file dynamically
+// Load the JSON file for the page
 fetch(`${pageName}.json`)
   .then(res => res.json())
   .then(data => {
