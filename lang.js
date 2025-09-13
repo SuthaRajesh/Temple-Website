@@ -1,94 +1,37 @@
-const translations = {
-    en: {
-     
-      temple_title: "Arulmigu Kaliamman Thirukovil",
-      temple_desc: "Bow to Kaliamman, and you bow to the strength within yourself.",
-      history_title: "History",
-      oldtemple: "Old Temple",
-      oldtemple_desc: "The origins of our temple trace back to <b>1928</b>, when the villagers built a humble shrine beneath the <b>sacred Arasa Maram</b>, installing idols of <b>Lord Ganesha and Kaliamman</b>. This simple shrine soon became the spiritual heart of the village, where devotees gathered for prayers, poojas, and festivals with deep faith and unity...",
-      newtemple: "New Temple",
-      newtemple_desc: " In <b>2016</b>, the villagers resolved to build a new,<b> grand temple</b>. Through collective effort, devotion, and generous donations, a magnificent stone temple was <b>completed in 2019</b>, standing as a lasting symbol of faith, unity, and divine grace...",
-      read_full_history: "Read Full History",
-      architecture: "Architecture",
-      architecture_desc: "The architecture of our temple is a beautiful blend of tradition and devotion. Every part of the structure has a sacred meaning — from the towering gopuram (gateway tower) that welcomes devotees, to the mandapam (pillared hall) where prayers and rituals take place. The garbhagriha (sanctum sanctorum) is the heart of the temple, where the deity resides, radiating divine energy. Intricate carvings, symbolic motifs, and sacred geometry guide the design, showing the harmony between art, science, and spirituality. The temple is not just built with stone and mortar, but with the faith and dedication of the community, making it a living space of culture, worship, and divine presence.",
-      gallery: "Gallery",
-      gal1: "Old Temple & Goddess",  
-      gal2: "New Temple",
-      gal3: "Kumbabishegam",
-      gal4: "Nonbu",
-      gal5: "Events",
-      view_more: "View More",
-      donation_title: "Donation",
-      donation_desc: "Support the temple and its activities through your kind donations. Click here to contribute via GPay, PhonePe, UPI, or direct transfer.",
-      donation_button: "Offer Your Support",
-      contact_us: "📞 Contact Us",
-      contact_desc: "We’d love to hear from you! Reach us anytime for temple details, donations, or festival updates.",
-      address: "📍 Address",
-      address_desc: "Sri Kaliamman Temple,<br> 123 Temple Street,<br> Chennai, Tamil Nadu - 600001.",
-      mobile: "📱 Mobile",
-      numbers: " 9876543210,<br/> 9123456780",
-      email: "✉️ Email",
-      website: "🌐 Website",
-      facebook: "📘 Facebook",
-      instagram: "📸 Instagram",
-      footer: " &copy; 2025 Kaliamman Temple | All Rights Reserved",
-      // Add all your keys here
-    },
-    ta: {
-      
-      temple_title: "அருள்மிகு காளியம்மன் திருக்கோவில்",
-      temple_desc: "காளியம்மனை வணங்குகிறீர்கள் என்றால், நீங்கள் உங்கள் உள்ளே உள்ள வலிமையை வணங்குகிறீர்கள்.",
-      history_title: "வரலாறு",
-      oldtemple: "பழைய கோவில்",
-      oldtemple_desc: "எங்கள் கோவிலின் தோற்றம் <b>1928</b>, ஆம் ஆண்டில் தொடங்கியது, அப்போது கிராம மக்கள் <b>புனித அரச மரத்தின்</b> கீழ் ஒரு எளிய ஆலயத்தை கட்டி, <b>கணேசர் மற்றும் காளியம்மன்</b> சிலைகளை நிறுவினர். இந்த எளிய ஆலயம் விரைவில் கிராமத்தின் ஆன்மீக இதயமாக மாறியது, அங்கு பக்தர்கள் ஆழ்ந்த நம்பிக்கையுடன் மற்றும் ஒன்றுபட்ட முறையில் பிரார்த்தனைகள், பூஜைகள் மற்றும் திருவிழாக்களுக்கு கூடினர்...",
-      newtemple: "புதிய கோவில்",
-      newtemple_desc: " <b>2016</b>, ஆம் ஆண்டில், கிராம மக்கள் ஒரு புதிய, <b>பெரிய கோவிலை</b> கட்ட முடிவு செய்தனர். கூட்ட முயற்சி, பக்தி மற்றும் மனமார்ந்த நன்கொடை மூலம், ஒரு அரிய கல் கோவில் <b>2019</b>, ஆம் ஆண்டில் முடிக்கப்பட்டது, இது நம்பிக்கை, ஒன்றுபட்ட தன்மை மற்றும் தெய்வீக கிருபையின் நிலையான சின்னமாக நிற்கிறது...",
-      read_full_history: "முழு வரலாற்றை படிக்கவும்",
-      architecture: "கலைவியல்",
-      architecture_desc: "எங்கள் கோவிலின் கட்டிடக்கலை பாரம்பரியம் மற்றும் பக்தியின் அழகான கலவையாகும். கட்டிடத்தின் ஒவ்வொரு பகுதியும் ஒரு புனித அர்த்தம் கொண்டுள்ளது — பக்தர்களை வரவேற்கும் உயரமான கோபுரம் (நுழைவாயில் கோபுரம்) முதல் பிரார்த்தனைகள் மற்றும் வழிபாடுகள் நடைபெறும் மண்டபம் (நிலையமண்டபம்) வரை. கர்பகிரகம் (அருள்மிகு இடம்) கோவிலின் இதயம், அங்கு தெய்வம் இருப்பது, தெய்வீக சக்தியை பரப்புகிறது. நுணுக்கமான சிற்பங்கள், சின்ன வடிவங்கள் மற்றும் புனித ஜியோமெட்ரி வடிவமைப்பை வழிநடத்துகின்றன, கலை, அறிவியல் மற்றும் ஆன்மீகத்தின் இடையேயான ஒத்திசைவை காட்டுகின்றன. கோவில் கல் மற்றும் சிமெண்ட் கொண்டு மட்டுமல்லாமல், சமூகத்தின் நம்பிக்கை மற்றும் அர்ப்பணிப்புடன் கட்டப்பட்டுள்ளது, இது கலாச்சாரம், வழிபாடு மற்றும் தெய்வீக இருப்பின் உயிருள்ள இடமாக இருக்கிறது.",
-      gallery: "கேலரி",
-      gal1: "பழைய கோவில் & தேவியார்",  
-      gal2: "புதிய கோவில்",
-      gal3: "கும்பாபிஷேகம்",
-      gal4: "நோன்பு",
-      gal5: "நிகழ்வுகள்",
-      view_more: "மேலும் காண்க",
-      donation_title: "நன்கொடை",
-      donation_desc: "கோவில் மற்றும் அதன் செயல்பாடுகளை உங்கள் அன்பான நன்கொடைகளின் மூலம் ஆதரிக்கவும். GPay, PhonePe, UPI அல்லது நேரடி பரிமாற்றம் மூலம் பங்களிக்க இங்கே கிளிக் செய்யவும்.",   
-      donation_button: "உங்கள் ஆதரவை வழங்குங்கள்",
-      contact_us: "📞 எங்களை தொடர்பு கொள்ளவும்",
-      contact_desc: "உங்களிடமிருந்து கேட்க விரும்புகிறோம்! கோவில் விவரங்கள், நன்கொடைகள் அல்லது திருவிழா புதுப்பிப்புகளுக்கு எங்களை எப்போதும் அணுகலாம்.",
-      address: "📍 முகவரி",
-      address_desc: "ஸ்ரீ காளியம்மன் கோவில்,<br> 123 கோவில் தெரு,<br> சென்னை, தமிழ்நாடு - 600001.",
-      mobile: "📱 மொபைல்",
-      numbers: " ௯௮௭௬௫௪௩௨௧௦,<br/>௯௧௨௩௪௫௬௭௮௦",
-      email: "✉️ மின்னஞ்சல்",
-      website: "🌐 இணையதளம்",
-      facebook: "📘 பேஸ்புக்",
-      instagram: "📸 இன்ஸ்டாகிராம்",
-      footer: " &copy; 2025 காளியம்மன் கோவில் | அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை",
-      // Add all your keys here
-    }
-  };
-  
-  let currentLang = 'en';
-  
-  function applyTranslations() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (translations[currentLang][key]) {
-        el.innerHTML = translations[currentLang][key];
-      }
-    });
-  }
-  
-  document.getElementById('langToggle').addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'ta' : 'en';
-    document.getElementById('langToggle').textContent =
-      currentLang === 'en' ? 'தமிழ்' : 'English';
+let translations = {};
+let currentLang = localStorage.getItem('lang') || 'en';
+
+// Detect current page name (index.html → index)
+const pageName = window.location.pathname.split('/').pop().split('.')[0] || 'index';
+
+// Load the correct JSON file dynamically
+fetch(`${pageName}.json`)
+  .then(res => res.json())
+  .then(data => {
+    translations = data;
     applyTranslations();
+  })
+  .catch(err => console.error(`Translation file not found: ${pageName}.json`, err));
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[currentLang] && translations[currentLang][key]) {
+      el.innerHTML = translations[currentLang][key];
+    }
   });
-  
-  // Apply once on page load (default English)
-  applyTranslations();
-  
+
+  const btn = document.getElementById('langToggle');
+  if (btn) {
+    btn.textContent = currentLang === 'en' ? 'தமிழ்' : 'English';
+  }
+}
+
+// Toggle language when button is clicked
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'langToggle') {
+    currentLang = currentLang === 'en' ? 'ta' : 'en';
+    localStorage.setItem('lang', currentLang);
+    applyTranslations();
+  }
+});
