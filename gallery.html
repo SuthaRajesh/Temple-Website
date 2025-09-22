@@ -57,6 +57,16 @@
       color: #444;
     }
   </style>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const fileId = params.get("src").split("id=")[1]; // extract ID
+    const iframe = document.getElementById("templeVideo");
+  
+    // Use Google Drive preview player
+    iframe.src = "https://drive.google.com/file/d/" + fileId + "/preview";
+  </script>
+
 </head>
 
 <body class="bg_color">
@@ -141,9 +151,9 @@
 
   
   <div class="container" id="newtemplecontainer">
-    <h2 class="gallery-header text-center p-3 mb-4">Old Temple</h2>
-    <h5 class="gallery-header text-success text-center pb-3 mb-5">“Every handful of soil carries the dream of a temple; every brick laid makes the plan come true.”</h5>
-    <div class="row p-5 g-3" style="background-color: #F2E2B1">
+    <h2 class="gallery-header text-center p-2 mb-2">Old Temple</h2>
+    <h5 class="gallery-header text-success text-center pb-3 mb-2">“Every handful of soil carries the dream of a temple; every brick laid makes the plan come true.”</h5>
+    <div class="row p-2 g-3" style="background-color: #F2E2B1">
   
       <!-- Gallery Item -->
       <div class="col-6 col-md-4 col-lg-2 d-flex">
@@ -179,9 +189,9 @@
   
   
   <div class="container" id="newtemplecontainer">
-    <h2 class="gallery-header text-center p-3 mb-4">New Temple </h2>
-    <h5 class="gallery-header text-success text-center pb-3 mb-5">"A temple is not built by stone alone, but by the prayers, unity, and dreams of its people."</h5>
-    <div class="row p-5 g-3" style="background-color: #F2E2B1;">
+    <h2 class="gallery-header text-center p-2 mb-1">New Temple </h2>
+    <h5 class="gallery-header text-success text-center pb-1 mb-1">"A temple is not built by stone alone, but by the prayers, unity, and dreams of its people."</h5>
+    <div class="row p-2 g-3" style="background-color: #F2E2B1;">
   
       <!-- Gallery Item -->
 
@@ -279,9 +289,9 @@
 
    
   <div class="container" id="newtemplecontainer">
-    <h2 class="gallery-header text-center p-3 mb-4">Consecration </h2>
-    <h5 class="gallery-header text-success text-center pb-3 mb-5">“When the sanctum is consecrated, stone becomes God, and faith becomes life.”</h5>
-    <div class="row p-5 g-3" style="background-color: #F2E2B1;">
+    <h2 class="gallery-header text-center p-2 mb-1">Consecration </h2>
+    <h5 class="gallery-header text-success text-center pb-1 mb-1">“When the sanctum is consecrated, stone becomes God, and faith becomes life.”</h5>
+    <div class="row p-2 g-3" style="background-color: #F2E2B1;">
   
       <!-- Gallery Item -->
 
@@ -453,11 +463,87 @@
   </div>
 
 
+ <!-- ===== Video Gallery ===== -->
+<div class="container my-4" id="videoGallery">
+  <h2 class="gallery-header text-center p-2 mb-1">Videos</h2>
+  <h5 class="gallery-header text-success text-center pb-1 mb-3">
+    Short clips of temple events
+  </h5>
+
+    <div class="row p-2 g-3" style="background-color: #F2E2B1;">
+      <!-- First video card -->
+    <div class="col-6 col-md-4 col-lg-2 d-flex">
+      <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+       
+          <img src="https://drive.google.com/uc?export=download&id=14PVUATq7gveqsRkBiB3FGv3O2d0NTsIk" class="gallery-img" alt="கோவில் வரலாறு வீடியோ">
+          <div class="play-overlay">
+            <span class="play-btn">▶</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Second video card -->
+<div class="col-6 col-md-4 col-lg-2 d-flex"> 
+  <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+    <a href="video.html?src=https://drive.google.com/file/d/14PVUATq7gveqsRkBiB3FGv3O2d0NTsIk/preview">
+      <div class="play-overlay">
+        <span class="play-btn">▶ Video</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+    <!-- Third video card -->
+    <div class="col-6 col-md-4 col-lg-2 d-flex">
+      <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+        <a href="video.html?src=video3.mp4&poster=prayer.png">
+          <img src="videos/prayer.png" class="gallery-img" alt="கோவில் வரலாறு வீடியோ">
+          <div class="play-overlay">
+            <span class="play-btn">▶</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Fourth video card -->
+    <div class="col-6 col-md-4 col-lg-2 d-flex">
+      <div class="gallery-card flex-fill" style="background-color: #F2E2B1;">
+        <a href="video.html?src=video4.mp4&poster=dance.png">
+          <img src="videos/dance.png" class="gallery-img" alt="கோவில் வரலாறு வீடியோ">
+          <div class="play-overlay">
+            <span class="play-btn">▶</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== Modal for playing videos ===== -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <video id="modalVideo" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <!-- Footer -->
 <footer class="text-center py-3 text-dark" style="background-color: #EDA35A;">
   &copy; 2025 Kaliamman Temple | All Rights Reserved
 </footer>
-
 
   <!-- Modal -->
 <div id="imgModal" class="modal">
@@ -472,6 +558,10 @@
   <a class="next">&#10095;</a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ✅ Your external JS -->
+<script src="video.js"></script>
   <script src="include.js"></script>
 <script>
   loadHTML("navbar", "navbar.html"); 

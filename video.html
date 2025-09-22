@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Video</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #F2E2B1;
+    }
+    iframe {
+      max-width: 90%;
+      height: 500px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- IFRAME to play Google Drive video -->
+  <iframe id="templeVideo" allow="autoplay; fullscreen"></iframe>
+
+  <script>
+    // Get the video link from the query string
+    const params = new URLSearchParams(window.location.search);
+    const videoSrc = params.get("src"); // this should be your Google Drive direct link
+
+    // Extract the file ID from the URL
+    const fileIdMatch = videoSrc.match(/id=([a-zA-Z0-9_-]+)/);
+    if(fileIdMatch){
+      const fileId = fileIdMatch[1];
+      const iframe = document.getElementById("templeVideo");
+
+      // Use Google Drive preview player
+      iframe.src = "https://drive.google.com/file/d/" + fileId + "/preview";
+    } else {
+      alert("Invalid video link");
+    }
+  </script>
+
+</body>
+</html>
