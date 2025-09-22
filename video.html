@@ -23,25 +23,11 @@
 </head>
 <body>
 
-  <!-- IFRAME to play Google Drive video -->
-  <iframe id="templeVideo" allow="autoplay; fullscreen"></iframe>
-
+  <iframe id="templeVideo" width="100%" height="500" allow="autoplay; fullscreen"></iframe>
   <script>
-    // Get the video link from the query string
     const params = new URLSearchParams(window.location.search);
-    const videoSrc = params.get("src"); // this should be your Google Drive direct link
-
-    // Extract the file ID from the URL
-    const fileIdMatch = videoSrc.match(/id=([a-zA-Z0-9_-]+)/);
-    if(fileIdMatch){
-      const fileId = fileIdMatch[1];
-      const iframe = document.getElementById("templeVideo");
-
-      // Use Google Drive preview player
-      iframe.src = "https://drive.google.com/file/d/" + fileId + "/preview";
-    } else {
-      alert("Invalid video link");
-    }
+    const videoSrc = params.get("src");
+    document.getElementById("templeVideo").src = videoSrc;
   </script>
 
 </body>
