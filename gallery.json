@@ -1,0 +1,27 @@
+{
+    "en":{
+        "old temple": "Old Temple",
+        "quote1":"“Every handful of soil carries the dream of a temple; every brick laid makes the plan come true.”",
+        "new temple": "New Temple",
+        "quote2": "“A temple is not built by stone alone, but by the prayers, unity, and dreams of its people.“",
+        "consecration": "Consecration",
+        "quote3":"“When the sanctum is consecrated, stone becomes God, and faith becomes life.”",
+        "videos": "Videos",
+        "clips": "Short Clips of temple events.",
+        "footer_text": " &copy; 2025 Kaliamman Temple | All Rights Reserved.",
+        "back_to_home": "Back to Home"
+    },
+
+    "ta":{
+        "old temple": "பழைய கோவில்",
+        "quote1":"“ஒவ்வொரு கைப்பிடி மணலும் ஒரு கோவிலின் கனவை சுமக்கிறது: அடுக்கும் ஒவ்வொரு செங்கல்லும் அந்த கனவை நனவாக்குகிறது.”",
+        "new temple": "புதிய கோவில்",
+        "quote2": "“கோவில் எழுவது கற்களால்:  உயிர் பெறுவது மக்களின் கனவுகள், ஒருமைப்பாடு மற்றும் பிரார்த்தனைகளால்.”",
+        "consecration": "பிரதிஷ்டை",
+        "videos": "வீடியோக்கள்",
+        "quote3":"“கருவறையில் சிலை பிரதிஷ்டை செய்யப்பட்ட தருணத்தில் கல் தெய்வமாகிறது: நம்பிக்கை வாழ்வாகிறது.”",
+        "clips": "கோவில் நிகழ்வுகளின் குறும்படங்கள்.",
+        "footer_text": " &copy; 2025 காளியம்மன் கோவில் | அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+        "back_to_home": "மீண்டும் முகப்புக்கு"
+    }
+}
