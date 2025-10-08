@@ -1,8 +1,8 @@
 .modal {
   display: none; 
-  position: fixed; 
+  position: relative; 
   z-index: 1050; 
-  padding-top: 80px; 
+  padding: 20px;
   left: 0;
   top: 0;
   width: 100vw;
@@ -14,11 +14,13 @@
 
 /* Modal Image */
 .modal-content {
+  max-width: 95vw;  /* responsive width */
+  max-height: 95vh; /* responsive height */
   margin: auto;  
-  max-height: 100vh;
+  object-fit: contain; /* maintain aspect ratio */
   display: block;
-  max-width: 50vw;   /* ✅ limit width */
   border-radius: 10px;
+ 
 }
 
 /* Caption */
@@ -31,16 +33,17 @@
 
 /* Close Button */
 .close {
+  z-index: 9999;
   position: absolute;
   top: 30px;
-  right: 50px;
-  color: #fff;
+  right: 35px;
+  color: #f8f5f5; 
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
 .close:hover {
-  color: #bbb;
+  color: #f3efef;
 }
 
 /* Navigation Arrows */
@@ -52,7 +55,7 @@
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: rgb(250, 248, 248);
   font-weight: bold;
   font-size: 30px;
   user-select: none;
@@ -68,6 +71,6 @@
 
 .modal .prev:hover,
 .modal .next:hover {
-  color: #f1f1f1;
+  color: #f8f5f5;
   transform: scale(1.2);
 }
