@@ -35,7 +35,7 @@
 .close {
   z-index: 9999;
   position: absolute;
-  top: 30px;
+  top: 15px;
   right: 35px;
   color: #f8f5f5; 
   font-size: 40px;
